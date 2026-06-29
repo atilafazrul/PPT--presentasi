@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80" role="img" aria-label="Universitas Multimedia Nusantara">
+  <defs>
+    <linearGradient id="globe" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#0d47a1"/>
+    </linearGradient>
+  </defs>
+  <circle cx="40" cy="40" r="28" fill="url(#globe)"/>
+  <ellipse cx="40" cy="40" rx="28" ry="10" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="1.5"/>
+  <ellipse cx="40" cy="40" rx="10" ry="28" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="1.5"/>
+  <rect x="58" y="18" width="10" height="10" rx="1.5" fill="#fff" opacity="0.9"/>
+  <rect x="72" y="18" width="10" height="10" rx="1.5" fill="#fff" opacity="0.7"/>
+  <rect x="58" y="32" width="10" height="10" rx="1.5" fill="#fff" opacity="0.7"/>
+  <rect x="72" y="32" width="10" height="10" rx="1.5" fill="#fff" opacity="0.5"/>
+  <text x="95" y="36" font-family="IBM Plex Sans, Arial, sans-serif" font-size="22" font-weight="700" fill="#1e88e5">UMN</text>
+  <text x="95" y="54" font-family="IBM Plex Sans, Arial, sans-serif" font-size="8.5" font-weight="500" fill="#5a6a7a" letter-spacing="0.08em">UNIVERSITAS MULTIMEDIA</text>
+  <text x="95" y="66" font-family="IBM Plex Sans, Arial, sans-serif" font-size="8.5" font-weight="500" fill="#5a6a7a" letter-spacing="0.08em">NUSANTARA</text>
+</svg>

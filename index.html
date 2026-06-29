@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=5" />
+  <link rel="stylesheet" href="styles.css?v=31" />
 </head>
 <body>
   <!-- LANDING -->
@@ -18,56 +18,81 @@
     <div class="orb orb-2"></div>
 
     <div class="landing-wrap">
-      <header class="landing-header">
-        <div class="brand-row">
-          <span class="brand-chip">UMN</span>
-          <span class="brand-chip outline">PT. HSR</span>
+      <header class="landing-topbar">
+        <div class="landing-brand">
+          <img src="assets/logos/logo-hsr.png" alt="PT. Hayati Semesta Raharja" class="landing-brand-logo" />
+          <div class="landing-brand-copy">
+            <strong>PT. Hayati Semesta Raharja</strong>
+            <span>Your Partner in Healthcare Business</span>
+          </div>
         </div>
-        <p class="brand-sub">Career Acceleration Program - 2025/2026</p>
+        <div class="landing-umn-badge">
+          <img src="assets/logos/logo-umn.png" alt="Universitas Multimedia Nusantara" class="landing-umn-logo" />
+        </div>
       </header>
 
-      <main class="landing-panel">
-        <p class="eyebrow">Laporan Kerja Magang</p>
-        <h1 class="landing-title">
-          Rancang Bangun <span class="accent-word">MANSYS</span><br />
-          Inventarisasi Aset &amp; Monitoring Progres Pekerjaan
-        </h1>
-        <p class="landing-subtitle">PT. Hayati Semesta Raharja - Departemen IT</p>
-
-        <div class="info-grid">
-          <div class="info-card">
-            <span class="info-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></span>
-            <span class="info-label">Mahasiswa</span>
-            <strong>Atila Fazrul Falah</strong>
-            <small>00000111118 - Informatika</small>
-          </div>
-          <div class="info-card">
-            <span class="info-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/></svg></span>
-            <span class="info-label">Dosen Pembimbing</span>
-            <strong>Dr. Ir. A. A. N. Ananda Kusuma</strong>
-            <small>FTI UMN</small>
-          </div>
-          <div class="info-card">
-            <span class="info-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span>
-            <span class="info-label">Posisi Magang</span>
-            <strong>Software Developer Intern</strong>
-            <small>Departemen IT</small>
-          </div>
-          <div class="info-card">
-            <span class="info-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
-            <span class="info-label">Periode</span>
-            <strong>Feb - Jul 2026</strong>
-            <small>6 Bulan - WFO</small>
-          </div>
+      <div class="landing-main">
+        <div class="landing-hero">
+          <p class="eyebrow">Laporan Kerja Magang</p>
+          <h1 class="landing-title">
+            Rancang Bangun <span class="accent-word"><em>MANSYS</em></span> untuk
+            <span class="accent-word">Inventarisasi Aset</span> dan Pemantauan
+            Progres Pekerjaan pada PT. Hayati Semesta Raharja
+          </h1>
+          <button id="start-btn" class="start-btn" type="button">
+            Mulai Presentasi
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </button>
         </div>
 
-        <button id="start-btn" class="start-btn" type="button">
-          Mulai Presentasi
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-        </button>
-      </main>
+        <aside class="landing-sidebar">
+          <div class="landing-mini-grid">
+            <div class="landing-card landing-card-mini">
+              <span class="card-tag">[ Mahasiswa ]</span>
+              <strong>Atila Fazrul Falah</strong>
+              <small>00000111118</small>
+              <span class="landing-badge">Informatika</span>
+            </div>
+            <div class="landing-card landing-card-mini">
+              <span class="card-tag">[ Dosen Pembimbing ]</span>
+              <strong>Dr. Ir. A. A. N. Ananda Kusuma</strong>
+              <small>Dosen Pembimbing</small>
+              <span class="landing-badge">FTI UMN</span>
+            </div>
+          </div>
 
-      <footer class="landing-footer">FTI - Universitas Multimedia Nusantara - 2026</footer>
+          <div class="landing-card landing-card-wide">
+            <div class="landing-detail-grid">
+              <div class="landing-detail-item">
+                <span class="card-tag">Posisi Magang</span>
+                <strong>Software Developer Intern</strong>
+                <small>Departemen IT</small>
+              </div>
+              <div class="landing-detail-item">
+                <span class="card-tag">Mitra Industri</span>
+                <strong>PT. Hayati Semesta Raharja</strong>
+                <small>Tangerang, Banten</small>
+              </div>
+              <div class="landing-detail-item">
+                <span class="card-tag">Periode Magang</span>
+                <strong>Feb &ndash; Jul 2026</strong>
+                <small>6 Bulan &middot; WFO</small>
+              </div>
+              <div class="landing-detail-item">
+                <span class="card-tag">Program</span>
+                <strong>Career Acceleration Program</strong>
+                <span class="landing-badge">2025/2026</span>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <footer class="landing-footer">
+        <span>Fakultas Teknik Informatika &middot; Universitas Multimedia Nusantara</span>
+        <span class="footer-sep" aria-hidden="true"></span>
+        <span>PT. Hayati Semesta Raharja &middot; 2026</span>
+      </footer>
     </div>
   </section>
 
@@ -82,13 +107,16 @@
 
     <header class="pres-header">
       <div class="pres-brand">
-        <span class="pres-logo">MANSYS</span>
-        <span class="pres-author">Atila Fazrul Falah</span>
+        <img src="assets/logos/logo-hsr.png" alt="PT. HSR" class="pres-brand-logo" />
+        <div class="pres-brand-text">
+          <span class="pres-logo">MANSYS</span>
+          <span class="pres-author">Atila Fazrul Falah &middot; PT. HSR</span>
+        </div>
       </div>
       <div class="pres-meta">
         <span id="slide-category" class="pres-category">Pendahuluan</span>
         <span class="pres-divider"></span>
-        <span id="slide-counter" class="pres-counter">01 / 17</span>
+        <span id="slide-counter" class="pres-counter">01 / 21</span>
       </div>
       <button id="notes-toggle" class="icon-btn" type="button" title="Catatan (N)">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>
@@ -121,10 +149,10 @@
     </footer>
   </section>
 
-  <script src="slides.js?v=5"></script>
-  <script src="flowchart.js?v=5"></script>
-  <script src="usecase.js?v=5"></script>
-  <script src="code-bg.js?v=5"></script>
-  <script src="app.js?v=5"></script>
+  <script src="slides.js?v=31"></script>
+  <script src="flowchart.js?v=31"></script>
+  <script src="usecase.js?v=31"></script>
+  <script src="code-bg.js?v=31"></script>
+  <script src="app.js?v=31"></script>
 </body>
 </html>

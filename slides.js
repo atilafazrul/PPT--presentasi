@@ -1,7 +1,7 @@
 const PRESENTATION_META = {
  student: "Atila Fazrul Falah",
  nim: "00000111118",
- totalSlides: 17,
+ totalSlides: 21,
 };
 
 const SLIDES = [
@@ -27,57 +27,58 @@ const SLIDES = [
  category: "profil",
  categoryLabel: "Pendahuluan",
  notes:
- "Magang dilaksanakan sebagai pemenuhan kewajiban akademik sekaligus pengalaman kerja profesional. Tujuan utamanya adalah merancang dan membangun MANSYS menggunakan React.js, Laravel REST API, dan MySQL agar operasional perusahaan lebih efisien dan terintegrasi.",
+ "Magang dilaksanakan sebagai pemenuhan kewajiban akademik sekaligus pengalaman kerja profesional. Tujuan utamanya adalah merancang dan membangun MANSYS agar operasional perusahaan lebih efisien dan terintegrasi.",
  points: [
- { title: "Maksud magang", desc: "Menerapkan ilmu perkuliahan ke lingkungan kerja nyata serta meningkatkan kemampuan teknis dan kolaborasi tim." },
+ { title: "Maksud dan tujuan magang", desc: "Memenuhi kewajiban akademik, menerapkan ilmu perkuliahan ke lingkungan kerja nyata, serta mengembangkan sistem digital operasional di PT. HSR." },
  { title: "Tujuan utama", desc: "Merancang dan mengembangkan sistem monitoring pekerjaan serta inventaris aset yang terpusat di PT. HSR." },
- { title: "Tujuan teknis", desc: "Implementasi React.js (frontend), Laravel REST API (backend), dan MySQL (database) dengan autentikasi Laravel Sanctum." },
  { title: "Target hasil", desc: "Operasional lebih efektif, transparan, dan minim risiko kesalahan pencatatan data." },
  ],
  },
  {
  id: 3,
  title: "Sejarah Singkat Perusahaan",
- subtitle: "Visi, Misi, dan Struktur Organisasi PT. Hayati Semesta Raharja",
+ subtitle: "Visi, Misi, dan Profil PT. Hayati Semesta Raharja",
  category: "profil",
  categoryLabel: "Gambaran Umum Perusahaan",
+ companyProfile: true,
+ logo: "assets/logos/logo-hsr.png",
  notes:
- "PT. Hayati Semesta Raharja adalah perusahaan domestik di sektor kesehatan. Persiapan usaha dimulai sejak 2017 dan resmi berbadan hukum pada 2021. Perusahaan bergerak di perdagangan alat medis, farmasi, laboratorium, radiologi, serta layanan servis perangkat kesehatan.",
+ "PT. Hayati Semesta Raharja adalah perusahaan nasional di sektor kesehatan. Persiapan usaha dimulai sejak 2017 dan resmi berbadan hukum pada 2021 di Tangerang, Banten. Perusahaan bergerak di perdagangan alat medis, farmasi, laboratorium, radiologi, serta layanan servis perangkat kesehatan.",
  points: [
- { title: "Profil perusahaan", desc: "PT. HSR berdiri sejak persiapan 2017, resmi badan hukum 2021, dipimpin Direktur Utama Syahrul Roji." },
- { title: "Ruang lingkup bisnis", desc: "Distribusi alat kesehatan, BHP, servis hardware/software perangkat medis, dan konstruksi ruang medis." },
+ { title: "Profil perusahaan", desc: "PT. HSR dirintis 2017, resmi berdiri 2021. Dipimpin Direktur Utama Syahrul Roji. Kantor pusat di Sukaasih, Tangerang, Banten." },
+ { title: "Ruang lingkup bisnis", desc: "Distribusi alat kesehatan, BHP, servis hardware/software perangkat medis, software penunjang medis, dan konstruksi ruang medis." },
  { title: "Visi", desc: "Menjadi perusahaan yang bermanfaat dalam perkembangan fasilitas kesehatan di Indonesia." },
- { title: "Misi", desc: "Membangun perusahaan yang berdedikasi dan terdepan dalam industri kesehatan Indonesia." },
- ],
- },
- {
- id: 4,
- title: "Uraian Pelaksanaan Magang",
- subtitle: "Posisi, Koordinasi, dan Alur Kerja Pengembangan MANSYS",
- category: "fitur",
- categoryLabel: "Pelaksanaan Kerja Magang",
- notes:
- "Selama 6 bulan (Februari-Juli 2026), saya ditempatkan di departemen IT sebagai Software Developer Intern. Koordinasi dilakukan dengan Direktur IT, Direktur Utama, tim intern, serta divisi operasional untuk memetakan kebutuhan sistem yang sesuai alur kerja perusahaan.",
- points: [
- { title: "Posisi & periode", desc: "Software Developer Intern di departemen IT, WFO di kantor pusat Tangerang, durasi 6 bulan." },
- { title: "Koordinasi internal", desc: "Berkolaborasi dengan 2 intern lain dalam pengembangan sistem, dengan pelaporan progres mingguan." },
- { title: "Koordinasi lintas divisi", desc: "Berinteraksi dengan Sales, Service, Kontraktor, Logistik, dan Purchasing untuk pemetaan kebutuhan." },
- { title: "Metodologi pengembangan", desc: "Perencanaan bertahap, pengembangan iteratif, integrasi REST API, dan pengujian fungsional berkala." },
+ { title: "Misi", desc: "Membangun perusahaan yang berdedikasi dan terdepan dalam perkembangan industri kesehatan Indonesia." },
  ],
  },
  {
  id: 5,
  title: "Uraian Sistem MANSYS",
- subtitle: "Arsitektur, Role-Based Access, dan Modul Utama",
+ subtitle: "Gambaran Umum, Tahapan Pengembangan, dan Tech Stack",
  category: "fitur",
  categoryLabel: "Pelaksanaan Kerja Magang",
  notes:
- "MANSYS dibangun dengan arsitektur decoupled: React.js sebagai SPA frontend dan Laravel sebagai REST API backend. Sistem menerapkan role-based access control dengan tiga level: Super Admin, Admin, dan User, serta pembagian modul per divisi operasional.",
- points: [
- { title: "Arsitektur teknologi", desc: "React.js (SPA) + Laravel REST API + MySQL, dengan autentikasi token Laravel Sanctum." },
- { title: "Role pengguna", desc: "Super Admin (akses penuh), Admin (operasional per divisi), User (monitoring terbatas)." },
- { title: "5 modul utama", desc: "(1) Dashboard, (2) Projek Kerja, (3) Manajemen Karyawan, (4) Manajemen Inventory, (5) Pengajuan & Approval Cuti." },
- { title: "Alur status pekerjaan", desc: "Projek: Dibuat → Persiapan → Proses → Editing → Invoicing → Selesai. Pembelian: Dipesan → Dikirim → Diterima." },
+ "Pada bagian ini saya menjelaskan inti dari pekerjaan saya selama magang, yaitu membangun MANSYS untuk menggantikan proses administrasi manual perusahaan. Saya mulai dengan menggali kebutuhan tiap divisi melalui diskusi, baru kemudian merancang basis data dan endpoint API-nya, lalu menghubungkan tampilan dengan server. Untuk teknologinya saya memakai React di sisi tampilan, Laravel 12 untuk logika dan API, serta MySQL sebagai penyimpanan datanya.",
+ narrative: [
+ "Fokus utama dalam pelaksanaan magang ini adalah merancang dan mengembangkan \"MANSYS\". MANSYS merupakan sebuah sistem manajemen internal berbasis web yang dibangun untuk memperbarui sistem administrasi konvensional perusahaan menjadi sebuah sistem digital yang terintegrasi secara penuh.",
+ ],
+ sections: [
+ {
+ heading: "Tahapan Pengembangan",
+ items: [
+ "Identifikasi kebutuhan operasional perusahaan.",
+ "Menyusun arsitektur basis data, API endpoint, serta perancangan antarmuka.",
+ "Integrasikannya frontend dan backend melalui RESTful API.",
+ ],
+ },
+ {
+ heading: "Tech Stack",
+ items: [
+ "React.js (Frontend)",
+ "Laravel 12 (Backend)",
+ "MySQL (Database)",
+ ],
+ },
  ],
  },
  {
@@ -87,19 +88,181 @@ const SLIDES = [
  category: "fitur",
  categoryLabel: "Gambaran Sistem",
  notes:
- "Use case diagram menggambarkan interaksi Sales, Service, dan Purchasing dengan modul projek, inventory, target, dan pembelian. Diagram ini selaras dengan implementasi di web-HSR dan menjadi acuan pembagian modul per divisi.",
+ "Use case diagram menggambarkan interaksi Sales, Service, dan Purchasing dengan modul penjualan, projek kerja, inventory, dan pembelian. Sales mengelola transaksi penjualan dan inisiasi projek. Service mengelola inventaris dan melaksanakan projek. Purchasing mengurus pengadaan barang. Super Admin memiliki akses penuh ke seluruh fitur.",
  flowchart: true,
  flowchartFull: true,
  usecase: true,
  image: "assets/flow-usecase-mansys.png",
  imageCaption: "Use case diagram MANSYS — interaksi aktor divisi dengan modul utama",
+ intro: "Sistem ini melibatkan 3 aktor utama, yaitu:",
+ outro: "Selain itu terdapat Super Admin yang mendapatkan akses penuh atas semua fitur yang ada.",
+ points: [
+ { title: "Sales", desc: "Berfokus pada manajemen transaksi penjualan dan inisiasi proyek kerja." },
+ { title: "Service", desc: "Berfokus pada pengelolaan inventaris operasional dan pelaksanaan proyek kerja." },
+ { title: "Purchasing", desc: "Berfokus pada pengadaan barang dan manajemen pembelian." },
+ ],
  },
  {
  id: 7,
+ title: "5 Modul yang Diimplementasikan",
+ subtitle: "Dashboard, Projek Kerja, Karyawan, Inventory, dan Cuti Karyawan",
+ category: "fitur",
+ categoryLabel: "Implementasi Fitur",
+ notes:
+ "Selama 15 minggu pengembangan, penulis mengimplementasikan 5 modul utama. Slide berikutnya menampilkan flowchart alur kerja dan screenshot implementasi tiap modul.",
+ points: [
+ { title: "1. Dashboard Super Admin & Admin", desc: "Halaman utama setelah login, ringkasan pekerjaan per divisi sesuai role." },
+ { title: "2. Modul Projek Kerja", desc: "CRUD projek, status pekerjaan, invite user, upload dokumentasi foto/file." },
+ { title: "3. Modul Manajemen Karyawan", desc: "Pendataan identitas, divisi, role, dan dokumen pendukung karyawan." },
+ { title: "4. Modul Manajemen Inventory", desc: "Pendataan aset per divisi: kode barang, stok, lokasi, kategori, foto." },
+ { title: "5. Modul Pengajuan & Approval Cuti", desc: "Pengajuan cuti Admin dan approval Super Admin (pending/approved/rejected)." },
+ ],
+ },
+ {
+ id: 8,
+ title: "Implementasi Modul 1: Dashboard",
+ subtitle: "Tampilan Dashboard, Status Summary, Biaya Non-Projek, dan Work Activity",
+ category: "demo",
+ categoryLabel: "Implementasi Visual",
+ moduleImpl: true,
+ notes:
+ "Modul dashboard menampilkan card per divisi beserta jumlah pekerjaan, status summary keseluruhan tugas, pencatatan biaya non-projek, dan tabel work activity. Super Admin melihat seluruh divisi, Admin hanya divisi masing-masing. Data diambil via GET /projek-kerja dengan filter role. Flowchart alur lengkap modul ini dapat dilihat pada bagian Lampiran.",
+ desc: [
+ "Setelah login, pengguna disambut halaman utama yang menampilkan card per divisi (IT, Service, Sales, Kontraktor, Logistik, Purchasing) lengkap dengan jumlah tugas pada masing-masing divisi.",
+ "Tampilan menyesuaikan hak akses: Super Admin melihat seluruh divisi, sedangkan Admin hanya divisinya sendiri. Data diambil langsung dari REST API lalu dihitung untuk tiap divisi.",
+ "Terdapat status summary yang merangkum seluruh tugas berdasarkan statusnya (Created, Preparation, Work in Progress, Editing, Invoicing, Completed) beserta pencatatan biaya non-projek (travel, expense, reimbursement).",
+ "Tabel work activity menampilkan daftar pekerjaan dengan filter divisi/status serta detail tugas, karyawan, lokasi, tanggal, dan status pengerjaan.",
+ ],
+ images: [
+ { src: "assets/screen-dashboard-sa.png", label: "Dashboard Super Admin" },
+ { src: "assets/screen-dashboard-admin.png", label: "Dashboard Admin" },
+ { src: "assets/screen-dashboard-status.png", label: "Status Summary & Non-Project Costs" },
+ { src: "assets/screen-dashboard-activity.png", label: "Tabel Work Activity" },
+ ],
+ imageCaption: "Gambar 3.1–3.4: Tampilan dashboard, status summary, dan work activity",
+ },
+ {
+ id: 9,
+ title: "Implementasi Modul 2: Projek Kerja",
+ subtitle: "Flowchart Alur & Tampilan Form dan Tabel Projek",
+ category: "demo",
+ categoryLabel: "Implementasi Visual",
+ moduleImpl: true,
+ notes:
+ "Modul projek kerja mendukung penambahan projek, pengisian divisi, karyawan, lokasi, status, upload dokumentasi, serta tabel data dengan pencarian dan aksi CRUD. Flowchart alur lengkap modul ini dapat dilihat pada bagian Lampiran.",
+ desc: [
+ "Terdapat halaman formulir untuk memasukkan detail data proyek dan mengunggah foto/file dokumentasi, serta halaman daftar proyek berupa tabel interaktif untuk memantau status pengerjaan secara langsung (Persiapan, Proses, Selesai).",
+ "Selain itu juga terdapat divisi yang terlibat dalam masing-masing projek kerja.",
+ ],
+ images: [
+ { src: "assets/screen-projek-form.png", label: "Form Tambah Projek" },
+ { src: "assets/screen-projek-data.png", label: "Tabel Data Projek" },
+ ],
+ imageCaption: "Gambar 3.3–3.5: Form tambah dan tabel data projek kerja",
+ },
+ {
+ id: 10,
+ title: "Implementasi Modul 3: Manajemen Karyawan",
+ subtitle: "Flowchart Alur & Tampilan Kelola Karyawan",
+ category: "demo",
+ categoryLabel: "Implementasi Visual",
+ moduleImpl: true,
+ notes:
+ "Modul manajemen karyawan untuk pendataan identitas, divisi, role, dan dokumen pendukung dengan fitur tambah, lihat detail, edit, dan hapus. Flowchart alur lengkap modul ini dapat dilihat pada bagian Lampiran.",
+ desc: [
+ "Terdapat halaman untuk mengelola data karyawan yang mencakup identitas, divisi, role, serta dokumen pendukung setiap karyawan.",
+ "Pengguna dapat menambah, melihat detail, mengubah, dan menghapus data, di mana seluruh masukan divalidasi terlebih dahulu di sisi server sebelum disimpan.",
+ ],
+ images: [
+ { src: "assets/screen-karyawan-list.png", label: "Halaman Kelola Karyawan" },
+ { src: "assets/screen-karyawan-form.png", label: "Form Tambah Karyawan" },
+ ],
+ imageCaption: "Gambar 3.6–3.8: Kelola karyawan dan form tambah karyawan",
+ },
+ {
+ id: 11,
+ title: "Implementasi Modul 4: Manajemen Inventory",
+ subtitle: "Flowchart Alur & Tampilan Pendataan Aset",
+ category: "demo",
+ categoryLabel: "Implementasi Visual",
+ moduleImpl: true,
+ notes:
+ "Modul inventory memfasilitasi pendataan aset per divisi meliputi kode barang, stok, lokasi, kategori, dan foto. Validasi di BarangController, penyimpanan via POST /barang. Flowchart alur lengkap modul ini dapat dilihat pada bagian Lampiran.",
+ desc: [
+ "Terdapat halaman untuk mendata aset/inventaris setiap divisi yang meliputi kode barang, jumlah stok, lokasi, kategori, dan foto barang.",
+ "Setiap penambahan barang divalidasi terlebih dahulu (stok dan kode) sebelum data tersimpan ke dalam basis data.",
+ ],
+ images: [
+ { src: "assets/screen-inventory-list.png", label: "Daftar Inventory" },
+ { src: "assets/screen-inventory-form.png", label: "Form Tambah Barang" },
+ ],
+ imageCaption: "Gambar 3.9–3.11: Daftar dan form inventory aset",
+ },
+ {
+ id: 12,
+ title: "Implementasi Modul 5: Pengajuan & Approval Cuti",
+ subtitle: "Flowchart Alur & Tampilan Halaman Cuti",
+ category: "demo",
+ categoryLabel: "Implementasi Visual",
+ moduleImpl: true,
+ notes:
+ "Modul cuti mendigitalisasi alur pengajuan oleh Admin dan approval Super Admin. Status: pending → approved atau rejected dengan alasan penolakan. Flowchart alur lengkap modul ini dapat dilihat pada bagian Lampiran.",
+ desc: [
+ "Terdapat halaman pengajuan cuti yang dapat diisi oleh Admin, serta halaman persetujuan yang dikelola oleh Super Admin.",
+ "Status pengajuan berjalan dari pending menjadi disetujui atau ditolak (disertai alasan penolakan), kemudian Admin menerima pemberitahuan atas keputusan tersebut.",
+ ],
+ images: [
+ { src: "assets/screen-cuti-pengajuan.png", label: "Halaman Pengajuan Cuti" },
+ { src: "assets/screen-cuti-approval.png", label: "Halaman Approval Cuti" },
+ ],
+ imageCaption: "Gambar 3.12–3.14: Halaman pengajuan dan approval cuti",
+ },
+ {
+ id: 13,
+ title: "Kendala dan Solusi",
+ subtitle: "Tantangan Pengembangan dan Strategi Penanganannya",
+ category: "evaluasi",
+ categoryLabel: "Kendala & Solusi",
+ notes:
+ "Selama pengembangan ditemukan kendala utama yang diatasi melalui perencanaan bertahap, pendekatan iteratif, dan pengujian berkala antara frontend dan backend.",
+ points: [
+ { title: "Kendala: keterbatasan waktu", desc: "Pengembangan sistem berjalan paralel dengan penyusunan laporan magang.", type: "problem" },
+ { title: "Solusi: perencanaan bertahap", desc: "Membagi fokus kerja antara pengerjaan sistem dan penulisan laporan per minggu.", type: "solution" },
+ { title: "Kendala: perubahan kebutuhan", desc: "Requirement dari pengguna berubah secara bertahap selama implementasi.", type: "problem" },
+ { title: "Solusi: pengembangan iteratif", desc: "Sistem dikembangkan fleksibel agar perubahan kebutuhan dapat diakomodasi.", type: "solution" },
+ ],
+ },
+ {
+ id: 14,
+ title: "Simpulan dan Saran",
+ subtitle: "Rangkuman Hasil Akhir & Rekomendasi Pengembangan Lanjutan",
+ category: "penutup",
+ categoryLabel: "Penutup",
+ notes:
+ "Simpulan disusun untuk menjawab maksud dan tujuan kerja magang. Tujuan utama merancang dan mengembangkan sistem monitoring pekerjaan serta inventaris aset yang terpusat telah tercapai melalui MANSYS. Target hasil berupa operasional yang lebih efektif, transparan, dan minim kesalahan pencatatan juga terpenuhi, sekaligus menjawab maksud akademik yaitu penerapan ilmu perkuliahan pada lingkungan kerja nyata. Disarankan penambahan notifikasi otomatis, modul analitik, peningkatan keamanan, dan optimasi mobile.",
+ points: [
+ { title: "Tujuan utama tercapai", desc: "Sistem monitoring pekerjaan dan inventaris aset yang terpusat berhasil dirancang dan dikembangkan dalam satu platform, yaitu MANSYS." },
+ { title: "Target hasil terpenuhi", desc: "Operasional menjadi lebih efektif, transparan, dan minim risiko kesalahan pencatatan; seluruh modul inti diimplementasikan dan lulus pengujian fungsional." },
+ { title: "Maksud akademik tercapai", desc: "Ilmu perkuliahan diterapkan langsung pada lingkungan kerja nyata melalui perancangan basis data, REST API, dan antarmuka sistem di PT. HSR." },
+ { title: "Saran pengembangan", desc: "Tambahkan notifikasi real-time & modul analitik, serta tingkatkan keamanan, backup berkala, dan optimasi akses mobile." },
+ ],
+ },
+ {
+ id: 15,
+ title: "Terima Kasih",
+ subtitle: "Sesi Tanya Jawab - Penutup Presentasi Laporan Magang",
+ category: "penutup",
+ categoryLabel: "Terima Kasih",
+ notes:
+ "Presentasi telah selesai. Terima kasih atas perhatian Bapak/Ibu penguji dan dosen pembimbing. Saya siap membuka sesi tanya jawab seputar pengembangan MANSYS.",
+ thankYou: true,
+ },
+ {
+ id: 16,
  title: "Flowchart Autentikasi & Role-Based Access",
  subtitle: "Alur Login, Laravel Sanctum, dan Routing Berdasarkan Role",
  category: "fitur",
- categoryLabel: "Flowchart Sistem",
+ categoryLabel: "Lampiran · Flowchart Sistem",
  notes:
  "Flowchart autentikasi: pengguna login via POST /api/login, token Sanctum disimpan, lalu diarahkan ke dashboard sesuai role super_admin, admin, atau user. Sistem memantau idle 15 menit dan session timeout.",
  flowchart: true,
@@ -142,11 +305,11 @@ const SLIDES = [
  },
  },
  {
- id: 8,
+ id: 17,
  title: "Flowchart Navigasi Modul MANSYS",
  subtitle: "Sidebar, Division Hub, dan Integrasi REST API",
  category: "fitur",
- categoryLabel: "Flowchart Sistem",
+ categoryLabel: "Lampiran · Flowchart Sistem",
  notes:
  "Setelah login, pengguna mengakses modul global via sidebar atau modul divisi via division hub. Semua halaman React.js terhubung ke REST API Laravel.",
  flowchart: true,
@@ -180,32 +343,18 @@ const SLIDES = [
  },
  },
  {
- id: 9,
- title: "5 Modul yang Diimplementasikan",
- subtitle: "Dashboard, Projek Kerja, Karyawan, Inventory, dan Cuti Karyawan",
+ id: 18,
+ title: "Lampiran — Flowchart Modul (1/2)",
+ subtitle: "Flowchart Alur Dashboard, Projek Kerja, dan Manajemen Karyawan",
  category: "fitur",
- categoryLabel: "Implementasi Fitur",
+ categoryLabel: "Lampiran · Flowchart Modul",
+ flowchartFull: true,
  notes:
- "Selama 15 minggu pengembangan, penulis mengimplementasikan 5 modul utama. Slide berikutnya menampilkan flowchart alur kerja dan screenshot implementasi tiap modul.",
- points: [
- { title: "1. Dashboard Super Admin & Admin", desc: "Halaman utama setelah login, ringkasan pekerjaan per divisi sesuai role." },
- { title: "2. Modul Projek Kerja", desc: "CRUD projek, status pekerjaan, invite user, upload dokumentasi foto/file." },
- { title: "3. Modul Manajemen Karyawan", desc: "Pendataan identitas, divisi, role, dan dokumen pendukung karyawan." },
- { title: "4. Modul Manajemen Inventory", desc: "Pendataan aset per divisi: kode barang, stok, lokasi, kategori, foto." },
- { title: "5. Modul Pengajuan & Approval Cuti", desc: "Pengajuan cuti Admin dan approval Super Admin (pending/approved/rejected)." },
- ],
- },
+ "Halaman lampiran ini menampilkan flowchart alur kerja tiga modul: Dashboard (login → cek role → GET /projek-kerja → render DivisiCard), Projek Kerja (input → validasi → upload → POST → pembaruan status), dan Manajemen Karyawan (GET /karyawan → form → validasi Laravel → simpan).",
+ imageCaption: "Flowchart alur modul Dashboard, Projek Kerja, dan Manajemen Karyawan.",
+ flowGallery: [
  {
- id: 10,
- title: "Implementasi Modul 1: Dashboard",
- subtitle: "Flowchart Alur & Tampilan Dashboard Super Admin dan Admin",
- category: "demo",
- categoryLabel: "Implementasi Visual",
- moduleImpl: true,
- notes:
- "Modul dashboard menampilkan card per divisi beserta jumlah pekerjaan. Super Admin melihat seluruh divisi, Admin hanya divisi masing-masing. Data diambil via GET /projek-kerja dengan filter role.",
- flowchart: "assets/flow-mod-dashboard.png",
- flowchartCaption: "Flowchart alur modul Dashboard",
+ label: "Modul 1 — Dashboard",
  flow: {
  cols: 3,
  nodes: [
@@ -232,23 +381,9 @@ const SLIDES = [
  { from: "count", to: "render" },
  ],
  },
- images: [
- { src: "assets/screen-dashboard-sa.png", label: "Dashboard Super Admin" },
- { src: "assets/screen-dashboard-admin.png", label: "Dashboard Admin" },
- ],
- imageCaption: "Gambar 3.1–3.2: Tampilan dashboard Super Admin dan Admin",
  },
  {
- id: 11,
- title: "Implementasi Modul 2: Projek Kerja",
- subtitle: "Flowchart Alur & Tampilan Form dan Tabel Projek",
- category: "demo",
- categoryLabel: "Implementasi Visual",
- moduleImpl: true,
- notes:
- "Modul projek kerja mendukung penambahan projek, pengisian divisi, karyawan, lokasi, status, upload dokumentasi, serta tabel data dengan pencarian dan aksi CRUD.",
- flowchart: "assets/flow-mod-projek.png",
- flowchartCaption: "Flowchart alur modul Projek Kerja",
+ label: "Modul 2 — Projek Kerja",
  flow: {
  cols: 3,
  nodes: [
@@ -274,23 +409,9 @@ const SLIDES = [
  { from: "patch", to: "table" },
  ],
  },
- images: [
- { src: "assets/screen-projek-form.png", label: "Form Tambah Projek" },
- { src: "assets/screen-projek-data.png", label: "Tabel Data Projek" },
- ],
- imageCaption: "Gambar 3.3–3.5: Form tambah dan tabel data projek kerja",
  },
  {
- id: 12,
- title: "Implementasi Modul 3: Manajemen Karyawan",
- subtitle: "Flowchart Alur & Tampilan Kelola Karyawan",
- category: "demo",
- categoryLabel: "Implementasi Visual",
- moduleImpl: true,
- notes:
- "Modul manajemen karyawan untuk pendataan identitas, divisi, role, dan dokumen pendukung dengan fitur tambah, lihat detail, edit, dan hapus.",
- flowchart: "assets/flow-mod-karyawan.png",
- flowchartCaption: "Flowchart alur modul Manajemen Karyawan",
+ label: "Modul 3 — Manajemen Karyawan",
  flow: {
  cols: 3,
  nodes: [
@@ -314,23 +435,22 @@ const SLIDES = [
  { from: "save", to: "done" },
  ],
  },
- images: [
- { src: "assets/screen-karyawan-list.png", label: "Halaman Kelola Karyawan" },
- { src: "assets/screen-karyawan-form.png", label: "Form Tambah Karyawan" },
+ },
  ],
- imageCaption: "Gambar 3.6–3.8: Kelola karyawan dan form tambah karyawan",
  },
  {
- id: 13,
- title: "Implementasi Modul 4: Manajemen Inventory",
- subtitle: "Flowchart Alur & Tampilan Pendataan Aset",
- category: "demo",
- categoryLabel: "Implementasi Visual",
- moduleImpl: true,
+ id: 19,
+ title: "Lampiran — Flowchart Modul (2/2)",
+ subtitle: "Flowchart Alur Manajemen Inventory dan Pengajuan & Approval Cuti",
+ category: "fitur",
+ categoryLabel: "Lampiran · Flowchart Modul",
+ flowchartFull: true,
  notes:
- "Modul inventory memfasilitasi pendataan aset per divisi meliputi kode barang, stok, lokasi, kategori, dan foto. Validasi di BarangController, penyimpanan via POST /barang.",
- flowchart: "assets/flow-mod-inventory.png",
- flowchartCaption: "Flowchart alur modul Inventory Aset",
+ "Halaman lampiran ini menampilkan flowchart alur kerja dua modul: Manajemen Inventory (GET /barang → form aset → validasi stok & kode → upload foto → POST /barang) dan Pengajuan & Approval Cuti (Admin ajukan → keputusan Super Admin → approved/rejected → notifikasi).",
+ imageCaption: "Flowchart alur modul Manajemen Inventory dan Pengajuan & Approval Cuti.",
+ flowGallery: [
+ {
+ label: "Modul 4 — Manajemen Inventory",
  flow: {
  cols: 3,
  nodes: [
@@ -354,23 +474,9 @@ const SLIDES = [
  { from: "post", to: "save" },
  ],
  },
- images: [
- { src: "assets/screen-inventory-list.png", label: "Daftar Inventory" },
- { src: "assets/screen-inventory-form.png", label: "Form Tambah Barang" },
- ],
- imageCaption: "Gambar 3.9–3.11: Daftar dan form inventory aset",
  },
  {
- id: 14,
- title: "Implementasi Modul 5: Pengajuan & Approval Cuti",
- subtitle: "Flowchart Alur & Tampilan Halaman Cuti",
- category: "demo",
- categoryLabel: "Implementasi Visual",
- moduleImpl: true,
- notes:
- "Modul cuti mendigitalisasi alur pengajuan oleh Admin dan approval Super Admin. Status: pending → approved atau rejected dengan alasan penolakan.",
- flowchart: "assets/flow-mod-cuti.png",
- flowchartCaption: "Flowchart alur modul Pengajuan & Approval Cuti",
+ label: "Modul 5 — Pengajuan & Approval Cuti",
  flow: {
  cols: 3,
  nodes: [
@@ -392,50 +498,127 @@ const SLIDES = [
  { from: "notif", to: "done" },
  ],
  },
- images: [
- { src: "assets/screen-cuti-pengajuan.png", label: "Halaman Pengajuan Cuti" },
- { src: "assets/screen-cuti-approval.png", label: "Halaman Approval Cuti" },
- ],
- imageCaption: "Gambar 3.12–3.14: Halaman pengajuan dan approval cuti",
  },
- {
- id: 15,
- title: "Kendala dan Solusi",
- subtitle: "Tantangan Pengembangan dan Strategi Penanganannya",
- category: "evaluasi",
- categoryLabel: "Kendala & Solusi",
- notes:
- "Selama pengembangan ditemukan kendala utama yang diatasi melalui perencanaan bertahap, pendekatan iteratif, dan pengujian berkala antara frontend dan backend.",
- points: [
- { title: "Kendala: keterbatasan waktu", desc: "Pengembangan sistem berjalan paralel dengan penyusunan laporan magang.", type: "problem" },
- { title: "Solusi: perencanaan bertahap", desc: "Membagi fokus kerja antara pengerjaan sistem dan penulisan laporan per minggu.", type: "solution" },
- { title: "Kendala: perubahan kebutuhan", desc: "Requirement dari pengguna berubah secara bertahap selama implementasi.", type: "problem" },
- { title: "Solusi: pengembangan iteratif", desc: "Sistem dikembangkan fleksibel agar perubahan kebutuhan dapat diakomodasi.", type: "solution" },
  ],
  },
  {
- id: 16,
- title: "Simpulan dan Saran",
- subtitle: "Rangkuman Hasil Akhir & Rekomendasi Pengembangan Lanjutan",
- category: "penutup",
- categoryLabel: "Penutup",
+ id: 20,
+ title: "Lampiran — Endpoint API (1/3)",
+ subtitle: "Modul Dashboard dan Modul Manajemen Karyawan",
+ category: "fitur",
+ categoryLabel: "Lampiran · Endpoint API",
+ flowchartFull: true,
  notes:
- "MANSYS berhasil menjawab permasalahan monitoring pekerjaan dan inventaris. Disarankan penambahan notifikasi otomatis, modul analitik, peningkatan keamanan, dan optimasi mobile.",
- points: [
- { title: "Simpulan", desc: "MANSYS berhasil mengintegrasikan monitoring pekerjaan dan inventaris aset dalam satu platform terpusat." },
- { title: "Capaian teknis", desc: "Seluruh modul inti diimplementasikan dan lulus pengujian fungsional sesuai kebutuhan operasional." },
- { title: "Saran: notifikasi & analitik", desc: "Tambahkan notifikasi real-time dan modul pelaporan untuk mendukung keputusan manajemen." },
- { title: "Saran: keamanan & mobile", desc: "Tingkatkan keamanan, backup berkala, regression testing, dan optimasi akses mobile." },
+ "Daftar endpoint REST API berdasarkan implementasi di routes/api.php pada repository web-HSR. Modul Dashboard menggunakan endpoint projek-kerja, dashboard-biaya, dan activity-logs. Modul Manajemen Karyawan menggunakan endpoint karyawan.",
+ endpoints: true,
+ tables: [
+ {
+ title: "Endpoint Modul Dashboard",
+ rows: [
+ { method: "GET", path: "/projek-kerja", desc: "Mengambil seluruh pekerjaan untuk dihitung per divisi." },
+ { method: "GET", path: "/dashboard-biaya", desc: "Mengambil daftar biaya di luar projek." },
+ { method: "GET", path: "/dashboard-biaya/summary", desc: "Ringkasan total biaya non-projek." },
+ { method: "POST", path: "/dashboard-biaya", desc: "Menambahkan catatan biaya non-projek." },
+ { method: "PATCH", path: "/dashboard-biaya/{id}", desc: "Mengubah data biaya non-projek." },
+ { method: "DELETE", path: "/dashboard-biaya/{id}", desc: "Menghapus catatan biaya non-projek." },
+ { method: "GET", path: "/dashboard-biaya/export-kas", desc: "Mengunduh rekap kas." },
+ { method: "GET", path: "/activity-logs", desc: "Menampilkan log aktivitas (Super Admin)." },
  ],
  },
  {
- id: 17,
- title: "Terima Kasih",
- subtitle: "Sesi Tanya Jawab - Penutup Presentasi Laporan Magang",
- category: "penutup",
- categoryLabel: "Terima Kasih",
+ title: "Endpoint Modul Manajemen Karyawan",
+ rows: [
+ { method: "GET", path: "/karyawan", desc: "Menampilkan seluruh data karyawan." },
+ { method: "GET", path: "/karyawan/{id}", desc: "Menampilkan detail satu karyawan." },
+ { method: "POST", path: "/karyawan", desc: "Menambahkan data karyawan baru." },
+ { method: "PUT", path: "/karyawan/{id}", desc: "Mengupdate data karyawan." },
+ { method: "DELETE", path: "/karyawan/{id}", desc: "Menghapus data karyawan." },
+ { method: "POST", path: "/karyawan/{id}/delete-file", desc: "Menghapus salah satu dokumen karyawan." },
+ { method: "GET", path: "/karyawan/{id}/ktp", desc: "Mengunduh / preview dokumen KTP." },
+ { method: "GET", path: "/karyawan/{id}/ijazah", desc: "Mengunduh / preview dokumen ijazah." },
+ ],
+ },
+ ],
+ },
+ {
+ id: 21,
+ title: "Lampiran — Endpoint API (2/3)",
+ subtitle: "Modul Projek Kerja: Data, Status, Foto, dan Dokumen",
+ category: "fitur",
+ categoryLabel: "Lampiran · Endpoint API",
+ flowchartFull: true,
  notes:
- "Presentasi telah selesai. Terima kasih atas perhatian Bapak/Ibu penguji dan dosen pembimbing. Saya siap membuka sesi tanya jawab seputar pengembangan MANSYS.",
- thankYou: true,
+ "Endpoint modul Projek Kerja terbagi menjadi pengelolaan data & status projek serta pengelolaan foto dan dokumen projek, sesuai ProjekKerjaController pada web-HSR.",
+ endpoints: true,
+ tables: [
+ {
+ title: "Projek Kerja — Data & Status",
+ rows: [
+ { method: "GET", path: "/projek-kerja", desc: "Mengambil daftar semua projek kerja." },
+ { method: "POST", path: "/projek-kerja", desc: "Menambahkan projek kerja baru." },
+ { method: "GET", path: "/projek-kerja/{id}", desc: "Menampilkan detail satu projek." },
+ { method: "PUT", path: "/projek-kerja/{id}", desc: "Mengupdate seluruh data projek." },
+ { method: "PATCH", path: "/projek-kerja/{id}/status", desc: "Mengubah status projek kerja." },
+ { method: "PATCH", path: "/projek-kerja/{id}/deskripsi", desc: "Mengubah deskripsi projek." },
+ { method: "PATCH", path: "/projek-kerja/{id}/uang", desc: "Mengelola rincian biaya projek." },
+ { method: "PATCH", path: "/projek-kerja/{id}/lunas", desc: "Mengubah status pelunasan." },
+ { method: "GET", path: "/projek-kerja/{id}/export-biaya", desc: "Mengunduh rincian biaya (CSV)." },
+ { method: "DELETE", path: "/projek-kerja/{id}", desc: "Menghapus data projek kerja." },
+ ],
+ },
+ {
+ title: "Projek Kerja — Foto & Dokumen",
+ rows: [
+ { method: "GET", path: "/projek-kerja/{id}/photos", desc: "Mengambil daftar foto dokumentasi." },
+ { method: "POST", path: "/projek-kerja/{id}/add-photo", desc: "Menambahkan foto dokumentasi." },
+ { method: "DELETE", path: "/projek-kerja/photo/{id}", desc: "Menghapus satu foto dokumentasi." },
+ { method: "GET", path: "/projek-kerja/{id}/files", desc: "Mengambil daftar dokumen projek." },
+ { method: "POST", path: "/projek-kerja/{id}/add-file", desc: "Menambahkan dokumen projek." },
+ { method: "DELETE", path: "/projek-kerja/file/{id}", desc: "Menghapus satu dokumen projek." },
+ { method: "GET", path: "/projek-kerja/{id}/folders", desc: "Mengambil folder media projek." },
+ { method: "POST", path: "/projek-kerja/{id}/folders", desc: "Membuat folder media baru." },
+ ],
+ },
+ ],
+ },
+ {
+ id: 22,
+ title: "Lampiran — Endpoint API (3/3)",
+ subtitle: "Modul Manajemen Inventory dan Modul Pengajuan & Approval Cuti",
+ category: "fitur",
+ categoryLabel: "Lampiran · Endpoint API",
+ flowchartFull: true,
+ notes:
+ "Modul Inventory mencakup endpoint barang (servis) dan logistik-inventory. Modul Cuti mencakup pengajuan, persetujuan, dan penolakan sesuai CutiController pada web-HSR.",
+ endpoints: true,
+ tables: [
+ {
+ title: "Endpoint Modul Manajemen Inventory",
+ rows: [
+ { method: "GET", path: "/barang", desc: "Menampilkan seluruh inventori barang." },
+ { method: "GET", path: "/barang/{id}", desc: "Menampilkan detail satu barang." },
+ { method: "POST", path: "/barang", desc: "Menambahkan data barang baru." },
+ { method: "PUT", path: "/barang/{id}", desc: "Mengupdate data barang & foto." },
+ { method: "DELETE", path: "/barang/{id}", desc: "Menghapus barang secara permanen." },
+ { method: "GET", path: "/logistik-inventory", desc: "Menampilkan seluruh barang logistik." },
+ { method: "POST", path: "/logistik-inventory", desc: "Menambahkan barang logistik baru." },
+ { method: "PUT", path: "/logistik-inventory/{id}", desc: "Mengupdate barang logistik." },
+ { method: "DELETE", path: "/logistik-inventory/{id}", desc: "Menghapus barang logistik." },
+ ],
+ },
+ {
+ title: "Endpoint Modul Pengajuan & Approval Cuti",
+ rows: [
+ { method: "GET", path: "/cuti", desc: "Menampilkan daftar pengajuan cuti." },
+ { method: "GET", path: "/cuti/summary", desc: "Ringkasan jumlah pending/approved/rejected." },
+ { method: "GET", path: "/cuti/{id}", desc: "Menampilkan detail pengajuan cuti." },
+ { method: "POST", path: "/cuti", desc: "Mengajukan cuti baru (multipart lampiran)." },
+ { method: "PUT", path: "/cuti/{id}", desc: "Mengupdate data pengajuan cuti." },
+ { method: "POST", path: "/cuti/{id}/approve", desc: "Super Admin menyetujui cuti." },
+ { method: "POST", path: "/cuti/{id}/reject", desc: "Super Admin menolak (+ alasan)." },
+ { method: "DELETE", path: "/cuti/{id}", desc: "Menghapus pengajuan cuti." },
+ ],
+ },
+ ],
  },
 ];
