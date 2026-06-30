@@ -38,7 +38,7 @@ function pointCard(pt, index) {
       <span class="point-num">${num}</span>
       <div class="point-body">
         <div class="point-title">${pt.title}</div>
-        <div class="point-desc">${pt.desc}</div>
+        ${pt.desc ? `<div class="point-desc">${pt.desc}</div>` : ""}
       </div>
     </div>
   `;

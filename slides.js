@@ -119,11 +119,11 @@ const SLIDES = [
  notes:
  "Selama 15 minggu pengembangan, penulis mengimplementasikan 5 modul utama. Slide berikutnya menampilkan flowchart alur kerja dan screenshot implementasi tiap modul.",
  points: [
- { title: "1. Dashboard Super Admin & Admin", desc: "Halaman utama setelah login, ringkasan pekerjaan per divisi sesuai role." },
- { title: "2. Modul Projek Kerja", desc: "CRUD projek, status pekerjaan, invite user, upload dokumentasi foto/file." },
- { title: "3. Modul Manajemen Karyawan", desc: "Pendataan identitas, divisi, role, dan dokumen pendukung karyawan." },
- { title: "4. Modul Manajemen Inventory", desc: "Pendataan aset per divisi: kode barang, stok, lokasi, kategori, foto." },
- { title: "5. Modul Pengajuan & Approval Cuti", desc: "Pengajuan cuti Admin dan approval Super Admin (pending/approved/rejected)." },
+ { title: "1. Dashboard Super Admin & Admin" },
+ { title: "2. Modul Projek Kerja" },
+ { title: "3. Modul Manajemen Karyawan" },
+ { title: "4. Modul Manajemen Inventory" },
+ { title: "5. Modul Pengajuan & Approval Cuti" },
  ],
  },
  {
