@@ -195,6 +195,16 @@ function buildSlideHTML(slide, slideIndex) {
     if (slide.imageCaption) body += `<p class="image-caption">${slide.imageCaption}</p>`;
     body += `</div>`;
   } else if (slide.narrative || slide.sections) {
+    if (slide.companyProfile && slide.logo) {
+      body += `
+        <div class="company-profile-banner">
+          <img src="${slide.logo}" alt="PT. Hayati Semesta Raharja" class="company-profile-logo" />
+          <div class="company-profile-copy">
+            <strong>PT. Hayati Semesta Raharja</strong>
+            <span>Your Partner in Healthcare Business</span>
+          </div>
+        </div>`;
+    }
     body += `<div class="uraian-block">`;
     (slide.narrative || []).forEach((p) => {
       body += `<p class="uraian-lead">${p}</p>`;

@@ -44,9 +44,19 @@ const SLIDES = [
  logo: "assets/logos/logo-hsr.png",
  notes:
  "PT. Hayati Semesta Raharja adalah perusahaan nasional di sektor kesehatan. Persiapan usaha dimulai sejak 2017 dan resmi berbadan hukum pada 2021 di Tangerang, Banten. Perusahaan bergerak di perdagangan alat medis, farmasi, laboratorium, radiologi, serta layanan servis perangkat kesehatan.",
- points: [
- { title: "Profil perusahaan", desc: "PT. HSR dirintis 2017, resmi berdiri 2021. Dipimpin Direktur Utama Syahrul Roji. Kantor pusat di Sukaasih, Tangerang, Banten." },
- { title: "Ruang lingkup bisnis", desc: "Distribusi alat kesehatan, BHP, servis hardware/software perangkat medis, software penunjang medis, dan konstruksi ruang medis." },
+ narrative: [
+ "PT. Hayati Semesta Raharja mulai dirintis pada 2017 dan resmi berbadan hukum pada 2021. Perusahaan dipimpin oleh Direktur Utama Syahrul Roji dengan kantor pusat di Sukaasih, Tangerang, Banten, dan berfokus pada sektor kesehatan nasional.",
+ ],
+ sections: [
+ {
+ heading: "Ruang Lingkup Bisnis",
+ items: [
+ "Distribusi alat kesehatan dan bahan habis pakai (BHP)",
+ "Servis hardware & software perangkat medis",
+ "Pengembangan software penunjang medis",
+ "Konstruksi ruang medis",
+ ],
+ },
  ],
  },
  {
