@@ -1587,9 +1587,16 @@ svg.flow-svg {
   .module-impl .screenshot-grid { grid-template-columns: 1fr; }
   .module-impl .screenshot-wrap img { max-height: 38vh; }
   .slide-container,
-  .slide-container.wide-container { padding: 0.75rem 0.75rem; }
+  .slide-container.wide-container {
+    padding: 0.75rem 0.75rem;
+    align-items: flex-start;
+  }
   .slide-stage,
-  .slide-stage.wide-slide { padding: 0.75rem; max-width: 100%; }
+  .slide-stage.wide-slide {
+    padding: 0.75rem;
+    max-width: 100%;
+    margin-block: 0;
+  }
   .slide-stage::before,
   .slide-stage::after { display: none; }
   .frame-corner { width: 18px; height: 18px; }
@@ -1683,6 +1690,18 @@ svg.flow-svg {
   .thankyou-slide h2 { font-size: clamp(1.6rem, 9vw, 2.1rem); }
   .ty-corner-umn { height: clamp(40px, 11vw, 52px); }
   .ty-corner-hsr { height: clamp(30px, 8vw, 42px); }
+}
+
+/* perangkat sentuh (HP/tablet) — termasuk saat mode "Situs Desktop" aktif:
+   konten slide menempel ke atas, tidak mengambang di tengah */
+@media (pointer: coarse) {
+  .slide-container {
+    align-items: flex-start;
+  }
+  .slide-stage,
+  .slide-stage.wide-slide {
+    margin-block: 0;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
