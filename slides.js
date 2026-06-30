@@ -37,7 +37,7 @@ const SLIDES = [
  {
  id: 3,
  title: "Sejarah Singkat Perusahaan",
- subtitle: "Visi, Misi, dan Profil PT. Hayati Semesta Raharja",
+ subtitle: "Profil PT. Hayati Semesta Raharja",
  category: "profil",
  categoryLabel: "Gambaran Umum Perusahaan",
  companyProfile: true,
@@ -47,8 +47,6 @@ const SLIDES = [
  points: [
  { title: "Profil perusahaan", desc: "PT. HSR dirintis 2017, resmi berdiri 2021. Dipimpin Direktur Utama Syahrul Roji. Kantor pusat di Sukaasih, Tangerang, Banten." },
  { title: "Ruang lingkup bisnis", desc: "Distribusi alat kesehatan, BHP, servis hardware/software perangkat medis, software penunjang medis, dan konstruksi ruang medis." },
- { title: "Visi", desc: "Menjadi perusahaan yang bermanfaat dalam perkembangan fasilitas kesehatan di Indonesia." },
- { title: "Misi", desc: "Membangun perusahaan yang berdedikasi dan terdepan dalam perkembangan industri kesehatan Indonesia." },
  ],
  },
  {
