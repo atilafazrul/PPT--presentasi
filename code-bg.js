@@ -60,51 +60,84 @@ function initCodeRain(canvas) {
   const parent = canvas.parentElement;
   const ctx = canvas.getContext("2d");
   const stream = buildStream();
-  const colWidth = 14;
   let columns = [];
   let animId = null;
   let running = true;
+  let cssW = 0;
+  let cssH = 0;
+  let dpr = 1;
 
   const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const mobileMq = window.matchMedia("(max-width: 768px)");
+
+  function isNarrow() {
+    return mobileMq.matches || cssW <= 768;
+  }
+
+  function colWidthFor(w) {
+    return isNarrow() ? 16 : 14;
+  }
 
   function isEdgeColumn(x, w) {
+    if (isNarrow()) return true;
     const edge = w * 0.2;
     return x < edge || x > w - edge;
+  }
+
+  function measureSize() {
+    const el = canvas.parentElement;
+    if (!el) return { w: 0, h: 0 };
+
+    const rect = el.getBoundingClientRect();
+    let w = Math.round(rect.width);
+    let h = Math.round(rect.height);
+
+    if (isNarrow() && window.visualViewport) {
+      w = Math.round(window.visualViewport.width);
+      h = Math.round(window.visualViewport.height);
+    }
+
+    return { w, h };
   }
 
   function resize() {
     const parent = canvas.parentElement;
     if (!parent) return;
-    const w = parent.clientWidth;
-    const h = parent.clientHeight;
+    const { w, h } = measureSize();
     if (w === 0 || h === 0) return;
 
-    const dpr = Math.min(window.devicePixelRatio || 1, 2);
-    canvas.width = w * dpr;
-    canvas.height = h * dpr;
+    cssW = w;
+    cssH = h;
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+    canvas.width = Math.round(w * dpr);
+    canvas.height = Math.round(h * dpr);
     canvas.style.width = w + "px";
     canvas.style.height = h + "px";
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
+    const colWidth = colWidthFor(w);
     const totalCols = Math.ceil(w / colWidth);
     columns = [];
+
     for (let i = 0; i < totalCols; i++) {
       const x = i * colWidth;
       if (!isEdgeColumn(x + colWidth / 2, w)) continue;
       columns.push({
         x,
         y: Math.random() * h,
-        speed: 0.4 + Math.random() * 0.9,
+        speed: (isNarrow() ? 0.35 : 0.4) + Math.random() * (isNarrow() ? 0.7 : 0.9),
         offset: Math.floor(Math.random() * stream.length),
-        len: 8 + Math.floor(Math.random() * 14),
-        opacity: 0.18 + Math.random() * 0.28,
+        len: isNarrow() ? 6 + Math.floor(Math.random() * 10) : 8 + Math.floor(Math.random() * 14),
+        opacity: isNarrow() ? 0.14 + Math.random() * 0.22 : 0.18 + Math.random() * 0.28,
       });
     }
   }
 
   function draw() {
-    const w = canvas.width / (window.devicePixelRatio || 1);
-    const h = canvas.height / (window.devicePixelRatio || 1);
+    const w = cssW;
+    const h = cssH;
+    if (!w || !h) return;
 
     ctx.clearRect(0, 0, w, h);
 
@@ -141,7 +174,7 @@ function initCodeRain(canvas) {
         if (col.y - col.len * fontSize > h) {
           col.y = -col.len * fontSize;
           col.offset = Math.floor(Math.random() * stream.length);
-          col.speed = 0.4 + Math.random() * 0.9;
+          col.speed = (isNarrow() ? 0.35 : 0.4) + Math.random() * (isNarrow() ? 0.7 : 0.9);
         }
       }
     });
@@ -158,9 +191,17 @@ function initCodeRain(canvas) {
 
   const onResize = () => resize();
   window.addEventListener("resize", onResize);
+  window.addEventListener("orientationchange", onResize);
+  mobileMq.addEventListener("change", onResize);
+
+  if (window.visualViewport) {
+    window.visualViewport.addEventListener("resize", onResize);
+    window.visualViewport.addEventListener("scroll", onResize);
+  }
 
   const ro = new ResizeObserver(() => {
-    if (parent.clientWidth > 0 && parent.clientHeight > 0) resize();
+    const { w, h } = measureSize();
+    if (w > 0 && h > 0) resize();
   });
   ro.observe(parent);
 
@@ -170,6 +211,12 @@ function initCodeRain(canvas) {
       running = false;
       if (animId) cancelAnimationFrame(animId);
       window.removeEventListener("resize", onResize);
+      window.removeEventListener("orientationchange", onResize);
+      mobileMq.removeEventListener("change", onResize);
+      if (window.visualViewport) {
+        window.visualViewport.removeEventListener("resize", onResize);
+        window.visualViewport.removeEventListener("scroll", onResize);
+      }
       ro.disconnect();
     },
     pause() {
