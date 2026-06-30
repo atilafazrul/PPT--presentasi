@@ -208,31 +208,66 @@ html, body {
 
 .landing-main {
   flex: 1;
-  display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
-  gap: clamp(1.5rem, 3vw, 3rem);
-  align-items: end;
-  padding-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: clamp(1rem, 4vh, 3rem) 0;
 }
 
 .landing-hero {
-  text-align: left;
-  align-self: end;
-  max-width: 760px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 940px;
   opacity: 0;
   animation: fadeUp 0.55s var(--ease) 0.12s forwards;
 }
 
-.landing-sidebar {
+/* strip info memanjang (pengganti kartu samping) */
+.landing-infostrip {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 1px;
+  width: 100%;
+  background: var(--line-2);
+  border: 1px solid var(--line-2);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.03) inset,
+    0 18px 48px rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  animation: fadeUp 0.55s var(--ease) 0.24s forwards;
+}
+
+.info-cell {
+  background: linear-gradient(160deg, rgba(24, 28, 38, 0.94) 0%, rgba(18, 21, 28, 0.97) 100%);
+  padding: 0.9rem 1rem 1rem;
   display: flex;
   flex-direction: column;
-  gap: 0.85rem;
-  align-self: end;
-  width: 100%;
-  max-width: 520px;
-  justify-self: end;
-  opacity: 0;
-  animation: slideRight 0.55s var(--ease) 0.2s forwards;
+  gap: 0.18rem;
+  text-align: left;
+  min-width: 0;
+}
+
+.info-cell .card-tag { margin-bottom: 0.3rem; }
+
+.info-cell strong {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.32;
+}
+
+.info-cell small {
+  font-size: 0.66rem;
+  color: var(--muted);
+  line-height: 1.45;
+  margin-top: auto;
+  padding-top: 0.3rem;
 }
 
 .eyebrow {
@@ -1434,19 +1469,14 @@ svg.flow-svg {
 }
 
 @media (max-width: 1024px) {
-  .landing-main {
-    grid-template-columns: 1fr;
-    align-items: start;
-    gap: 2rem;
+  .landing-infostrip {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
-  .landing-hero,
-  .landing-sidebar {
-    max-width: none;
-    justify-self: stretch;
-    align-self: start;
-  }
-  .landing-sidebar {
-    max-width: 640px;
+}
+
+@media (max-width: 640px) {
+  .landing-infostrip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -1539,16 +1569,12 @@ svg.flow-svg {
     height: 44px;
   }
   .landing-main {
-    gap: 1.25rem;
-    padding-bottom: 0;
+    padding: 1.5rem 0 1.25rem;
+    justify-content: flex-start;
   }
   .landing-hero {
-    align-self: start;
-  }
-  .landing-sidebar {
-    align-self: stretch;
-    width: 100%;
     max-width: none;
+    width: 100%;
   }
   .landing-title {
     font-size: clamp(1.45rem, 6.8vw, 2rem);
@@ -1557,13 +1583,6 @@ svg.flow-svg {
   }
   .eyebrow {
     margin-bottom: 1rem;
-  }
-  .landing-mini-grid,
-  .landing-detail-grid {
-    grid-template-columns: 1fr;
-  }
-  .landing-card-mini {
-    min-height: 0;
   }
   .landing-footer {
     flex-direction: column;
