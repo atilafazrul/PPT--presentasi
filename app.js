@@ -30,9 +30,19 @@ function buildDots() {
   });
 }
 
-function pointCard(pt, index) {
+function getPointNumber(pt, index, allPoints) {
+  if (pt.type === "problem") {
+    return allPoints.slice(0, index + 1).filter((p) => p.type === "problem").length;
+  }
+  if (pt.type === "solution") {
+    return allPoints.slice(0, index).filter((p) => p.type === "problem").length;
+  }
+  return index + 1;
+}
+
+function pointCard(pt, index, allPoints) {
   const cls = pt.type ? `point-card ${pt.type}` : "point-card";
-  const num = String(index + 1).padStart(2, "0");
+  const num = String(getPointNumber(pt, index, allPoints)).padStart(2, "0");
   return `
     <div class="${cls}">
       <span class="point-num">${num}</span>
@@ -239,7 +249,7 @@ function buildSlideHTML(slide, slideIndex) {
         </div>`;
     }
     body += `<div class="${gridClass}">`;
-    slide.points.forEach((pt, i) => { body += pointCard(pt, i); });
+    slide.points.forEach((pt, i) => { body += pointCard(pt, i, slide.points); });
     body += `</div>`;
   }
 
